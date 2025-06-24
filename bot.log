@@ -16,3 +16,20 @@ connector: <aiohttp.connector.TCPConnector object at 0x0000023B391E6ED0>
 2025-06-24 17:58:27,631 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
 2025-06-24 17:58:27,632 - bot.discord_client - INFO - Bot is in 6 guilds
 2025-06-24 17:58:27,633 - bot.discord_client - INFO - Memory-enabled chat channels: {}
+2025-06-24 22:09:00,293 - __main__ - INFO - Starting Discord Sarvam AI Chatbot...
+2025-06-24 22:09:00,629 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-06-24 22:09:00,629 - discord.client - INFO - logging in using static token
+2025-06-24 22:09:01,872 - bot.discord_client - INFO - Setting up Discord bot...
+2025-06-24 22:09:01,874 - bot.discord_client - INFO - Discord bot setup complete
+2025-06-24 22:09:03,016 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3960c82d0a4c70f39ced705677e5ca33).
+2025-06-24 22:09:05,521 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
+2025-06-24 22:09:05,522 - bot.discord_client - INFO - Bot is in 6 guilds
+2025-06-24 22:09:05,522 - bot.discord_client - INFO - Memory-enabled chat channels: {}
+2025-06-24 22:10:11,857 - __main__ - INFO - Starting Discord Sarvam AI Chatbot...
+2025-06-24 22:10:12,134 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-06-24 22:10:12,135 - discord.client - INFO - logging in using static token
+2025-06-24 22:10:13,494 - bot.discord_client - INFO - Setting up Discord bot…
+2025-06-24 22:10:13,499 - bot.discord_client - INFO - Discord bot setup complete
+2025-06-24 22:10:14,643 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 4b1a53bbd80a2aaf356673e08e70512e).
+2025-06-24 22:10:16,694 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
+2025-06-24 22:10:16,695 - bot.discord_client - INFO - Bot is in 6 guilds
