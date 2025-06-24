@@ -76,7 +76,9 @@ class DiscordBot(commands.Bot):
         logger.info("Setting up Discord bot…")
 
         from bot.chat_commands import FunCommands
+        from bot.study_commands import StudyCommands
         await self.add_cog(FunCommands(self))
+        await self.add_cog(StudyCommands(self))
 
         logger.info("Discord bot setup complete")
 
@@ -189,14 +191,4 @@ class DiscordBot(commands.Bot):
                 "Sorry, I encountered an error while processing your message."
             )
 
-    # ---------------------------------------------------------------------
-    # command‑error reporting
-    # ---------------------------------------------------------------------
 
-    async def on_command_error(
-        self, ctx: commands.Context, error: Exception
-    ):
-        if isinstance(error, commands.CommandNotFound):
-            return
-        logger.error(f"Command error in {ctx.command}: {error}")
-        await ctx.send(f"An error occurred: {str(error)}")

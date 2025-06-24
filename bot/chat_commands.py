@@ -1,15 +1,21 @@
 """
 Fun and entertainment commands for the Discord bot
 """
-
+import re
 import asyncio
 import random
 import logging
 from typing import List, Dict, Any
 import discord
 from discord.ext import commands
+import bot
 from bot.store import ChatChannelMemory
 channel_memory = ChatChannelMemory()
+from bot.study_commands import StudyCommands
+
+async def setup(bot):
+    await bot.add_cog(StudyCommands(bot))
+    await bot.add_cog(FunCommands(bot))
 
 
 logger = logging.getLogger(__name__)
@@ -462,30 +468,20 @@ class FunCommands(commands.Cog):
         )
 
         # General Commands
-        embed.add_field(name="🎉 General Commands", value="\u200b", inline=False)
-        embed.add_field(name="`!help`", value="Show this help message", inline=True)
-        embed.add_field(name="`!ask <question>`", value="Ask Sarvam AI something", inline=True)
-        embed.add_field(name="`!define <word>`", value="Look up the definition of a word", inline=True)
-        embed.add_field(name="`!quote`", value="Get a random inspirational quote", inline=True)
-        embed.add_field(name="`!stats`", value="Show bot/server statistics", inline=True)
-        embed.add_field(name="`!info`", value="Show bot info", inline=True)
-        embed.add_field(name="`/ping`", value="Check bot latency", inline=True)
+        embed.add_field(name="🎉 General Commands", value="`!help`, `!ask`, `!define`, `!quote`, `!stats`, `!info`, `/ping`", inline=False)
 
-        # Fun Commands
-        embed.add_field(name="\n🎮 Fun & Games", value="\u200b", inline=False)
-        embed.add_field(name="`!joke`", value="Get a random joke", inline=True)
-        embed.add_field(name="`!fun`", value="Random fun activities", inline=True)
-        embed.add_field(name="`!game`", value="Start a mini-game", inline=True)
-        embed.add_field(name="`!guess`", value="Play number guessing", inline=True)
-        embed.add_field(name="`!roll`", value="Roll a dice", inline=True)
-        embed.add_field(name="`!flip`", value="Flip a coin", inline=True)
+        # Study Commands
+        embed.add_field(name="📚 Study Commands", value="`!notes`, `!codehelper`, `!explain`, `!convert`, `!formula`, `!meaning`", inline=False)
+
+        # Fun & Games
+        embed.add_field(name="🎮 Fun & Games", value="`!joke`, `!fun`, `!game`, `!roast`, `!guess`, `!roll`, `!flip`", inline=False)
+
+        # Productivity & Dev/Code Commands (if any remain)
+        # (If you want to keep this section, add a single line, or merge with Study)
 
         # Admin-only section (only shown to admins)
         if is_admin:
-            embed.add_field(name="\n🛡️ Admin Commands", value="\u200b", inline=False)
-            embed.add_field(name="`!setchannel [#channel]`", value="Set the bot’s chat channel", inline=True)
-            embed.add_field(name="`!unsetchannel`", value="Unset the fixed channel", inline=True)
-            embed.add_field(name="`!setprefix <prefix>`", value="Change the bot prefix", inline=True)
+            embed.add_field(name="🛡️ Admin Commands", value="`!setchannel`, `!unsetchannel`, `!setprefix`", inline=False)
 
         embed.set_footer(text="Use responsibly. AI remembers what you teach it. 🤖")
 
@@ -516,3 +512,4 @@ class FunCommands(commands.Cog):
         embed.add_field(name="System", value=platform.system(), inline=True)
 
         await ctx.send(embed=embed)
+
