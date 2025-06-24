@@ -1,0 +1,18 @@
+2025-06-24 17:57:05,775 - __main__ - INFO - Starting Discord Sarvam AI Chatbot...
+2025-06-24 17:57:06,089 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-06-24 17:57:06,089 - discord.client - INFO - logging in using static token
+2025-06-24 17:57:07,337 - bot.discord_client - INFO - Setting up Discord bot...
+2025-06-24 17:57:07,340 - __main__ - ERROR - Fatal error: No module named 'memory'
+2025-06-24 17:57:07,341 - __main__ - INFO - Bot shutting down...
+2025-06-24 17:57:07,373 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000023B393BF770>, 1190131.687)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000023B391E6ED0>
+2025-06-24 17:58:22,347 - __main__ - INFO - Starting Discord Sarvam AI Chatbot...
+2025-06-24 17:58:22,610 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-06-24 17:58:22,610 - discord.client - INFO - logging in using static token
+2025-06-24 17:58:23,980 - bot.discord_client - INFO - Setting up Discord bot...
+2025-06-24 17:58:24,008 - bot.discord_client - INFO - Discord bot setup complete
+2025-06-24 17:58:25,111 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 1aa38495c2b2bf0974ef7432a743623c).
+2025-06-24 17:58:27,631 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
+2025-06-24 17:58:27,632 - bot.discord_client - INFO - Bot is in 6 guilds
+2025-06-24 17:58:27,633 - bot.discord_client - INFO - Memory-enabled chat channels: {}
