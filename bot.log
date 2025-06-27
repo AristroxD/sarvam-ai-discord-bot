@@ -376,3 +376,47 @@ Traceback (most recent call last):
     raise CommandInvokeError(exc) from exc
 discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
 In embeds.0.fields: Must be 25 or fewer in length.
+2025-06-24 23:44:20,270 - __main__ - INFO - Starting Discord Sarvam AI Chatbot...
+2025-06-24 23:44:20,522 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-06-24 23:44:20,522 - discord.client - INFO - logging in using static token
+2025-06-24 23:44:22,022 - bot.discord_client - INFO - Setting up Discord bot…
+2025-06-24 23:44:22,055 - bot.discord_client - INFO - Discord bot setup complete
+2025-06-24 23:44:23,160 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 8903ae5ef6f7cb500a99c9d0c6cf44a4).
+2025-06-24 23:44:25,580 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
+2025-06-24 23:44:25,581 - bot.discord_client - INFO - Bot is in 6 guilds
+2025-06-24 23:44:29,584 - discord.ext.commands.bot - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "helo" is not found
+2025-06-24 23:44:43,675 - discord.ext.commands.bot - ERROR - Ignoring exception in command notes
+Traceback (most recent call last):
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 1021, in invoke
+    await self.prepare(ctx)
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 938, in prepare
+    await self._parse_arguments(ctx)
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 853, in _parse_arguments
+    kwargs[name] = await self.transform(ctx, param, attachments)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 697, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: subject is a required argument that is missing.
+2025-06-24 23:45:05,875 - bot.sarvam_client - INFO - Sending request to Sarvam API
+2025-06-24 23:45:16,403 - httpx - INFO - HTTP Request: POST https://api.sarvam.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 23:47:09,762 - discord.ext.commands.bot - ERROR - Ignoring exception in command meaning
+Traceback (most recent call last):
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 1021, in invoke
+    await self.prepare(ctx)
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 938, in prepare
+    await self._parse_arguments(ctx)
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 853, in _parse_arguments
+    kwargs[name] = await self.transform(ctx, param, attachments)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\debaj\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 697, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: name is a required argument that is missing.
+2025-06-24 23:47:16,028 - bot.sarvam_client - INFO - Sending request to Sarvam API
+2025-06-24 23:47:19,953 - httpx - INFO - HTTP Request: POST https://api.sarvam.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 23:49:02,342 - bot.sarvam_client - INFO - Sending request to Sarvam API
+2025-06-24 23:49:08,008 - httpx - INFO - HTTP Request: POST https://api.sarvam.ai/v1/chat/completions "HTTP/1.1 200 OK"

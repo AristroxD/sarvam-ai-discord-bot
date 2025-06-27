@@ -180,8 +180,15 @@ class StudyCommands(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        # Only process replies to the bot, not DMs or bot messages
+        # Only process replies to THIS bot, not DMs or bot messages
         if message.author.bot or not message.reference:
+            return
+        # Prevent duplicate handling: do NOT run if this is a command (let command processor handle it)
+        if message.content.startswith(self.bot.command_prefix):
+            return
+        # Prevent duplicate handling: do NOT run if this is a reply (let main bot handler handle it)
+        if message.reference and message.reference.resolved and getattr(message.reference.resolved.author, 'id', None) == self.bot.user.id:
+            # If this is a reply to the bot, skip here so only one handler responds
             return
         ref = message.reference
         if not ref.resolved:
@@ -191,17 +198,18 @@ class StudyCommands(commands.Cog):
                 return
         else:
             ref_msg = ref.resolved
-        # Only respond if the replied-to message is from the bot
-        if not ref_msg or not ref_msg.author or not ref_msg.author.bot:
+        # Only respond if the replied-to message is from THIS bot
+        if not ref_msg or not ref_msg.author or ref_msg.author.id != self.bot.user.id:
             return
         # Maintain short-term context for the conversation
         if not hasattr(self.bot, "_sarvam_context"):  # global context
             self.bot._sarvam_context = []
-        # Add the previous bot message as context
-        self.bot._sarvam_context.append({"role": "assistant", "content": ref_msg.content})
-        self.bot._sarvam_context.append({"role": "user", "content": message.content})
-        # Only keep last 8 turns
-        self.bot._sarvam_context = self.bot._sarvam_context[-8:]
+        context = self.bot._sarvam_context[-8:] if hasattr(self.bot, "_sarvam_context") else []
+        if context and context[-1]["role"] == "assistant":
+            context = context[:-1]
+        context.append({"role": "assistant", "content": ref_msg.content})
+        context.append({"role": "user", "content": message.content})
+        self.bot._sarvam_context = context[-8:]
         async with message.channel.typing():
             response = await self.bot.sarvam_client.generate_response(self.bot._sarvam_context)
         self.bot._sarvam_context.append({"role": "assistant", "content": response})
