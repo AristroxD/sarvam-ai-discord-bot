@@ -44,4 +44,5 @@ class ChatChannelMemory:
 
     def is_channel_allowed(self, channel_id: int) -> bool:
         """Check if a channel is in the memory-enabled list."""
-        return str(channel_id) in self.data.values() or channel_id in self.data.values()
+        # Fix: channel_id must match the stored channel_id (int or str)
+        return channel_id in self.data.values() or str(channel_id) in self.data.values()

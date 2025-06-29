@@ -1,1 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# Environment
 .env
+.env.*
+
+# Logs
+bot.log
+*.log
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python virtual environments
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Replit
+replit.db
+
+# Lock files
+poetry.lock
+Pipfile.lock
+uv.lock
+
+# Misc
+*.bak
+*.swp
+*.tmp
+
+# Ignore test outputs
+*.coverage
+htmlcov/
+
+# Ignore compiled C extensions
+build/
+dist/
