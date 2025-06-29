@@ -513,3 +513,23 @@ discord.ext.commands.errors.MissingRequiredArgument: name is a required argument
 2025-06-29 18:07:17,819 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 39c9b8195d59d7d458d8f1521770f7f9).
 2025-06-29 18:07:20,218 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
 2025-06-29 18:07:20,218 - bot.discord_client - INFO - Bot is in 6 guilds
+2025-06-29 18:09:57,771 - __main__ - INFO - Starting Discord Sarvam AI Chatbot...
+2025-06-29 18:09:58,068 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-06-29 18:09:58,068 - discord.client - INFO - logging in using static token
+2025-06-29 18:09:59,506 - bot.discord_client - INFO - Setting up Discord bot…
+2025-06-29 18:09:59,514 - bot.discord_client - INFO - Discord bot setup complete
+2025-06-29 18:10:00,878 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: ddfb0928ee9fc5a3c43374aa6bd91350).
+2025-06-29 18:10:02,939 - bot.discord_client - INFO - Bot logged in as Thinkron AI#5264 (ID: 862357854446288916)
+2025-06-29 18:10:02,941 - bot.discord_client - INFO - Bot is in 6 guilds
+2025-06-29 18:10:09,921 - bot.sarvam_client - INFO - Sending request to Sarvam API
+2025-06-29 18:10:10,706 - httpx - INFO - HTTP Request: POST https://api.sarvam.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-29 18:24:42,446 - bot.sarvam_client - INFO - Sending request to Sarvam API
+2025-06-29 18:24:43,322 - httpx - INFO - HTTP Request: POST https://api.sarvam.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-29 18:24:52,003 - discord.ext.commands.bot - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "concept" is not found
+2025-06-29 18:24:59,386 - discord.ext.commands.bot - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "concept" is not found
+2025-06-29 18:25:05,621 - discord.ext.commands.bot - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "concept" is not found
+2025-06-29 18:30:39,593 - bot.sarvam_client - INFO - Sending request to Sarvam API
+2025-06-29 18:30:40,393 - httpx - INFO - HTTP Request: POST https://api.sarvam.ai/v1/chat/completions "HTTP/1.1 200 OK"
