@@ -28,6 +28,7 @@ class SarvamClient:
             import asyncio
             if asyncio.iscoroutinefunction(self.client.chat.completions):
                 response = await self.client.chat.completions(
+                    model=self.config.sarvam_model_name,
                     messages=messages,
                     temperature=0.7,
                     max_tokens=self.config.max_response_length
@@ -37,6 +38,7 @@ class SarvamClient:
                 response = await loop.run_in_executor(
                     None,
                     lambda: self.client.chat.completions(
+                        model=self.config.sarvam_model_name,
                         messages=messages,
                         temperature=0.7,
                         max_tokens=self.config.max_response_length
